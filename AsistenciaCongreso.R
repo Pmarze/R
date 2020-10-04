@@ -55,8 +55,10 @@ diaSIMP<-dia[!duplicated(dia), ]
 # Ordenados alfabéticamente por el correo electrónico
 diaSIMP<- diaSIMP[with(diaSIMP, order(diaSIMP$`Dirección de correo electrónico`)), ]
 
+# Correos con su número de apariciones en asistencia
 b<-as.data.frame(table(diaSIMP$`Dirección de correo electrónico`))
-c<-b[b$Freq > 15, ]
+# Correos que tienen más de 17 asistencias
+c<-b[b$Freq > 17, ]
 ####################################################################################################
 ############################################ Resultados ############################################
 
