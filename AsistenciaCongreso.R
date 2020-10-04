@@ -4,7 +4,7 @@
 #install.packages("readxl")
 #install.packages("dplyr")
 #install.packages("writexl")
-library("writexl")      # Expotar archivos de excel
+library("writexl")      # Exportar archivos de excel
 library("readxl")       # Importar archivos de excel
 library("dplyr")        # Manejo de Data frames
 
@@ -59,6 +59,7 @@ diaSIMP<- diaSIMP[with(diaSIMP, order(diaSIMP$`Dirección de correo electrónico
 b<-as.data.frame(table(diaSIMP$`Dirección de correo electrónico`))
 # Correos que tienen más de 17 asistencias
 c<-b[b$Freq > 17, ]
+
 ####################################################################################################
 ############################################ Resultados ############################################
 
